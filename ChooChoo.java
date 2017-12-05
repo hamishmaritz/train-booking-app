@@ -42,7 +42,7 @@ public class ChooChoo extends TrainOperator {
 		for (int x = journey.floorGrid.firstClassRow; x < journey.floorGrid.numberOfRows; x++) {
 			for (int y = 0; y < journey.floorGrid.numberOfCols; y++) {
 				findSeat = journey.floorGrid.seats[x][y];
-				// FIX THE MIDDLE AND RESERVED
+				
 				if (findSeat.seatType == SeatType.MIDDLE && findSeat.reserved == false) {
 					// LEFT
 					if (journey.floorGrid.getLeft(findSeat) != null) {
@@ -52,7 +52,7 @@ public class ChooChoo extends TrainOperator {
 						returnedSeat.reserved = true;
 						return returnedSeat;
 					}
-					// RIGHT
+					
 					if (journey.floorGrid.getRight(findSeat) != null) {
 						right = journey.floorGrid.getRight(findSeat);
 						returnedSeat = findSeat;
@@ -62,8 +62,7 @@ public class ChooChoo extends TrainOperator {
 					}
 
 				}
-				// THIS IS A REPEAT OF THE FOR AND IF LOOP ABOVE
-				// FIX THE WINDOW AND RESERVED
+				
 				if (findSeat.seatType == SeatType.WINDOW && findSeat.reserved == false) {
 					if (journey.floorGrid.getLeft(findSeat) != null) {
 						left = journey.floorGrid.getLeft(findSeat);
