@@ -106,7 +106,7 @@ public class TrainSeatBookingApplication {
 		System.out.println(newJourney + "\n"); // remove n line
 		System.out.println(seatingGrid);
 
-		// FIX THIS
+	
 		newJourney.floorGrid = seatingGrid;
 
 		while (exit == false) {
@@ -115,7 +115,7 @@ public class TrainSeatBookingApplication {
 			printMenu();
 			userinput = keyboard.nextLine();
 
-			// IMPORTANT
+			
 			String uChoice = null;
 
 			if (userinput.equals(choice1)) {
