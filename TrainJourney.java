@@ -12,7 +12,6 @@ package assignment2;
 public class TrainJourney {
 
 	// Default Variables
-	// NEED PROTECTION ON THESE VARIABLES
 	protected String startcity;
 	protected String endcity;
 	protected String departuretime;
